@@ -1,0 +1,111 @@
+{
+
+  "portraitTileCount":0,
+  "landscapeTileCount":0,
+  "orientation":"horizontal",
+  "swipeEnable":true,
+  "maxItemCount":0,
+
+  "tileConfig": {
+    "textRows": [
+      {
+        "id": 1,
+        "align": "center-align",
+        "marginTopBottom": 5,
+        "columns": [
+          {
+            "name": "Brand Name",
+            "fontSize": 5,
+            "textColor": "#909080",
+            "fontName": "roboto_bold.ttf"
+
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "align": "center-align",
+        "marginTopBottom": 5,
+        "columns": [
+          {
+            "name": "Product Name",
+            "fontSize": 6,
+            "textColor": "#99999A",
+            "boldEnable": true,
+            "fontName": "roboto_medium.ttf"
+
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "align": "center-align",
+        "marginLeftRight": 5,
+        "marginTopBottom": 5,
+        "columns": [
+          {
+            "name": "Description",
+            "fontSize": 8,
+            "textColor": "#66666A",
+            "maxCharLength": 20,
+            "fontName": "ostrich_regular.ttf"
+
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "align": "center-align",
+        "marginLeftRight": 5,
+        "marginTopBottom": 5,
+        "columns": [
+          {
+            "name": "Price",
+            "fontSize": 6,
+            "textColor": "#1FAE06",
+            "marginLeftRight": 10,
+            "fontName": "roboto_regular.ttf"
+
+          },
+          {
+            "name": "Discount Price",
+            "fontSize": 6,
+            "strikeOutEnable": true,
+            "textColor": "#1FAE06",
+            "marginLeftRight": 10,
+            "fontName": "roboto_regular.ttf"
+
+          }
+        ]
+      }
+    ],
+    "image": {
+      "width": 300,
+      "height": 400,
+      "marginTopBottom": 10,
+      "marginLeftRight": 10
+    }
+  },
+
+  "header": {
+    "lineHeight":1,
+    "title":"",
+    "lineStyle":"dashedLine",
+    "lineColor":"#33333A",
+    "fontSize":9,
+    "textColor":"#008080",
+    "marginLeftRight":10,
+    "fontName":"roboto_bold.ttf",
+    "dashWidth":10
+  },
+
+  "footer": {
+    "lineHeight":1,
+    "lineStyle":"line",
+    "lineColor":"#33333A",
+    "fontSize":9,
+    "textColor":"#008080",
+    "marginLeftRight":10,
+    "fontName":"roboto_bold.ttf"
+  }
+}
