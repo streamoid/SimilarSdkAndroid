@@ -17,7 +17,7 @@ SimilarSDK is an Android framework for displaying vendor products list based on 
 
 ### Binary
 
-You may [download AAR releases here.](https://github.com/streamoid/PiQAlike-android/releases)
+You may [download AAR releases here.](https://github.com/streamoid/SimilarSdkAndroid/releases)
 
 ### JCenter
 
