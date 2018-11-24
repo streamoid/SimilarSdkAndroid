@@ -257,7 +257,7 @@ config.json
  ## Orientation (horizontal,vertical)
        
        
-       Type of Widget  : horizontal or vertical
+        Type of Widget  : horizontal or vertical
           
 
 
@@ -277,58 +277,57 @@ config.json
 
 ## Tile Configuration(tileConfig)
          
-     It Contains the image Configuration and textRows Configuration 
+       It Contains the image Configuration and textRows Configuration 
 
 
  ## Image configuration  (image)
 
-	width  - width of the image 
-	height - height of the image	
-	marginTopBottom - margin for top and bottom of the image (Integer) 
-	marginLeftRight - margin for left and right of the image (Integer)
-	scaleType - Scale Type is left ,right ,center
+       width  - width of the image 
+       height - height of the image	
+       marginTopBottom - margin for top and bottom of the image (Integer) 
+       marginLeftRight - margin for left and right of the image (Integer)
+       scaleType - Scale Type is left ,right ,center
 
  ## Rows Of text (textRows)
 
-        id - id for the row(Integer)
-        align - How should be align (left-align,right-align, center-align)
-        marginLeftRight - Margin for left and right of row view 
-        marginTopBottom - margin for top and bottom of the row
-        Columns[] - list of columns in a row
+       id - id for the row(Integer)
+       align - How should be align (left-align,right-align, center-align)
+       marginLeftRight - Margin for left and right of row view 
+       marginTopBottom - margin for top and bottom of the row
+       Columns[] - list of columns in a row
 
 
  ## Column Of Each Row (columns)
 	
-	fontName    - custom font name roboto_regular.ttf (font file should be defined in  assets/fonts with same name (This is optional)
-	fontSize   - Font Size of the Text  , it should be integer
-	textColor  - Text Color  it should be String (#909090)
+       fontName    - custom font name roboto_regular.ttf (font file should be defined in  assets/fonts with same name 
+       fontSize   - Font Size of the Text  , it should be integer
+       textColor  - Text Color  it should be String (#909090)
 	
-	name       - key to display value in this field ( Brand Name, Product Name ) 
-	boldEnable - Enable bold Text (boolean)
-	strikeOutEnable - Enable Strike out Text (boolean) 
-	underlineEnable - Enable Underline text (boolean)
-	maxLines        - how many lines should be display (Integer) , default it is singleline  
-	marginLeftRight - margin for left and right of the view (Integer)
-	marginTopBottom - margin for top and bottom of the view (Integer)
+       name       - key to display value in this field ( Brand Name, Product Name ) 
+       boldEnable - Enable bold Text (boolean)
+       strikeOutEnable - Enable Strike out Text (boolean) 
+       underlineEnable - Enable Underline text (boolean)
+       maxLines        - how many lines should be display (Integer) , default it is singleline  
+       marginLeftRight - margin for left and right of the view (Integer)
+       marginTopBottom - margin for top and bottom of the view (Integer)
 
 ## Header and footer of Widget (header,footer)
 
-	lineHeight - lineHeight  (Integer)
-	title - Title of the Header 
-	lineEnable - line should be shown after and before the text (boolean)
-	lineStyle - Style of the line (dashedLine ,line) 
-	lineColor - color of the line 
+       lineHeight - lineHeight  (Integer)
+       title - Title of the Header 
+       lineEnable - line should be shown after and before the text (boolean)
+       lineStyle - Style of the line (dashedLine ,line) 
+       lineColor - color of the line 
 	
-	fontName    - custom font name roboto_regular.ttf (font file should be defined in  assets/fonts with same name (This is optional)
-	fontSize   - Font Size of the Text  , it should be integer
-	textColor  - Text Color  it should be String (#909090)
-	
-	boldText - Text to be bold  (String)
-	strikeOutText - Text to be StrikeoutText (String) 
-	underlineText - Text to be StrikeoutTex (String)
-	maxLines        - how many lines should be display (Integer) 
-	marginLeftRight - margin for left and right of the view (Integer)
-	marginTopBottom - margin for top and bottom of the view (Integer)
+       fontName    - custom font name roboto_regular.ttf (font file should be defined in  assets/fonts with same name 
+       fontSize   - Font Size of the Text  , it should be integer
+       textColor  - Text Color  it should be String (#909090)
+       boldText - Text to be bold  (String)
+       strikeOutText - Text to be StrikeoutText (String) 
+       underlineText - Text to be StrikeoutTex (String)
+       maxLines        - how many lines should be display (Integer) 
+       marginLeftRight - margin for left and right of the view (Integer)
+       marginTopBottom - margin for top and bottom of the view (Integer)
 
 
 
