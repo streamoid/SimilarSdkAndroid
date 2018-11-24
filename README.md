@@ -19,163 +19,114 @@ SimilarSDK is an Android framework for displaying vendor products list based on 
 
 You may [download AAR releases here.](https://github.com/streamoid/SimilarSdkAndroid/releases)
 
-### JCenter
+### SETUP
 
-Add JCenter to your build file's list of repositories.
+1. Copy the streamoid aar file to libs folder in project 
 
-```groovy
-repositories {
-    jcenter()
-}
-```
 
-to use the JCenter Repository
-
-```groovy
-dependencies {
-    ...
-    compile 'com.streamoid.sdk.piqalike:piqalikesdk:1.1.0'
-    ...
-}
-```
-
-Add following to manifest application
-
+2. Copy the below arguments to build.gradle (app  module) in dependencies block 
 
 ```
- <application
-  ...
-  tools:replace="android:theme"
-  ...
-  >
+	dependencies {
+		implementation(name : 'streamoid-1.1',ext:'aar') // build tool version >=27
+		  
+		   Or 
+
+		compile(name : 'streamoid-1.1',ext:'aar') // build tool version <27 
+	}
+```
+3. Copy the below arguments to build.gradle(app  module)  to Load the aar file in libs folder 
+```
+	repositories {
+	    flatDir {
+		dirs 'libs'
+	    }
+
+	}
 ```
 
-### Verifying PiQAlike Configuration
+4. Sync the project 
 
-Once you have finished adding PiQAlike framework to your project, you can test your configuration by importing the dependencies and connecting a client to the PiQAlike cloud. To do so, add following code to your Application class. (note that you must substitute the client name and client token placeholder text with your actual values, in order to get these values please contact us at support@streamoid.com):
+5. Add config.json in assets folder 
 
-### Simple Intialization
-```sh
- piqALike.initialize(VENDOR, TOKEN, new com.streamoid.sdk.piqalike.Callback() {
-                @Override
-                public void onSuccess(String response) {
-                    //Connection Success
-                }
+6. Add font files in assets/fonts/  folder Which are mentioned in config.json file  fontName attribute 
 
-                @Override
-                public void onFail(String error) {
-                    //Connection Failed
+7. Add this layout to Xml file 
 
-                }
-            });
+```
+     <com.streamoid.product.ProductWidget.ProductListWidget
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:vendorId="270811"
+        app:vendorName=”v_pantaloons”
+                android:id="@+id/product_view">
+     </com.streamoid.product.ProductWidget.ProductListWidget>
 
 ```
 
-### Custom Intialization
+8. Add Application file in App  See the below code 
 
-```sh
+ ```   
 
-                PiqALikeParams params=new PiqALikeParams();
-                //Customize themeColor,etc..
-                params.setThemeColor(Color.MAGENTA);
-                params.setTextColor(Color.WHITE);
-                
-                //Customize UI elements in Camera screen
-                params.setDrawableCameraRotate(R.mipmap.ic_camera_rotate);
-                params.setDrawableBackButton(R.mipmap.demo_ic_back);
-                params.setDrawableFlashAuto(R.mipmap.ic_flash_auto);
-                params.setDrawableFlashOff(R.mipmap.ic_flashoff);
-                params.setDrawableFlashOn(R.mipmap.ic_flash_on);
-                params.setDrawableCameraSnapButton(R.drawable.demo_camera_button);
+    public class SampleApplication extends Application {
 
-                //Customize UI elements in Crop/Preview screen            
-                params.setCropperType(PiqALikeParams.CROPPER.FREEMODE);
-                params.setRetakeBtnBGColor(Color.MAGENTA);
-                params.setSearchBtnBGColor(Color.WHITE);
-                
-                //Customize UI elements in Filter screen
-                params.setMainCategoryTextColor(Color.MAGENTA);
-                params.setSubCategoryTextColor(Color.WHITE);
-                
-                //Cusotmize UI elements in Fetching dialog
-                params.setFetchingDialogTitle("Searching...");
-                params.setFetchingDialogTextColor(Color.MAGENTA);
-
-                PiqALike.getInstance(Demo.this).initialize(VENDOR, TOKEN,params, new Callback() {
-                    @Override
-                    public void onSuccess(String response) {
-                        PiqALike.getInstance(Demo.this).openCamera(new CameraCallback() {
-                            @Override
-                            public void onSuccess(String response, String originalBitmap, String croppedBitmap, String cropPoints,FilterApplied filterApplied) {
-                                Log.v("callback","success");
-
-}
-
-                            @Override
-                            public void onFail(String error) {
-                                Log.v("callback","fail");
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void onFail(String error) {
-
-                    }
-                });
+        @Override
+        public void onCreate() {
+            super.onCreate();
+        }
+    }
+    
+    
+    
+ ```
+ 
+ 9. Add that application class name on the manifest File like this 
+ ```
 
 
+
+    <application
+
+       android:label="@string/app_name"
+       android:name=".SampleApplication">
+       
+       
+       
+ ```
+
+10 . Add Permission in Manifest File 
+```
+
+
+<uses-permission android:name="android.permission.INTERNET"/>
 
 
 ```
 
-Launch your application and verify that the connection is successful. You are now ready to begin visual search.
+11. Add sdk Initialize code in Application Class  
+
+ ```
+ 
+ 
+    public class SampleApplication extends Application {
+
+        @Override
+        public void onCreate() {
+            super.onCreate();
+            SDKManager.initialize(this);
+
+        }
+    }
+    
+    
+    
+    
+ ```
 
 
-### To Start Visual Search
-
-```
- PiqALike.getInstance(Context).openCamera(new CameraCallback() {
-                    @Override
-                    public void onSuccess(final String response, String originalBitmap, String croppedBitmap, String cropPoints){
-                        // Handle Response
-
-                    }
-
-                    @Override
-                    public void onFail(String error) {
-                    // Handle Fail Case
-                    }
-                });
-
-```
+12. vendorId,vendorName attribute are mandatory for this view . If vendorId,vendorName are not given, view is not showing any content
 
 
-### To find Visually similar products by productId
-
-```
-PiqALike.getInstance(Context).getVisuallySimilarProducts(PRODUCTID, new SimilarSearchResultsCallback() {
-            @Override
-            public void onSuccess(String response) {
-                // Handle Response
-            }
-
-            @Override
-            public void onFail(String error) {
-              // Handle Fail Case
-            }
-        });
-```
-### Note
-
-Following Permissions are mandatory:
-
-```sh
-Manifest.permission.CAMERA // To use Device Camera
-Manifest.permission.INTERNET // To connect Webservice and fetch matches
-Manifest.permission.ACCESS_NETWORK_STATE // To check Network Availibility
-Manifest.permission.READ_EXTERNAL_STORAGE or Manifest.permission.WRITE_EXTERNAL_STORAGE// To access Gallery to pick image for search matches
-```
 ### Contact
 
 You can reach the Streamoid team at any time by emailing support@streamoid.com.
