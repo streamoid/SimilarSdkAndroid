@@ -1,18 +1,16 @@
-# PiQAlike Android
+# SimilarSDK Android
 
 [![N|Solid](http://www.streamoid.com/images/logo.png)](http://www.streamoid.com/)
 
-This repository contains binary distributions of PiQAlike Android framework.
+This repository contains binary distributions of SimilarSDK Android framework.
 
-If you have any questions, comments, or issues related to PiQAlike, Please contact the team by emailing support@streamoid.com.
+If you have any questions, comments, or issues related to SimilarSDK, Please contact the team by emailing support@streamoid.com.
 
 
-### PiQAlike
+### SimilarSDK
 
-PiQAlike is an Android framework for visual search recommendations in fashion. PiQAlike framework provided by Streamoid Technologies lets you seemlessly integrate visual search feature into your native android applications
+SimilarSDK is an Android framework for displaying vendor products list based on configuration. SimilarSDK framework provided by Streamoid Technologies lets you seemlessly integrate visual search feature into your native android applications
 
-- what is visual search in fashion ?
-- That perfect summer dress you saw in a magazine or those shoes that the woman was wearing at the coffee shop this morning. Just take a photo and find similar products in your app using PiQAlike SDK.
 
 
 ### Installation
