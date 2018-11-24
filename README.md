@@ -9,7 +9,7 @@ If you have any questions, comments, or issues related to SimilarSDK, Please con
 
 ### SimilarSDK
 
-SimilarSDK is an Android framework for displaying vendor products list based on configuration. SimilarSDK framework provided by Streamoid Technologies lets you seemlessly integrate visual search feature into your native android applications
+SimilarSDK is an Android framework for displaying vendor similar products list based on configuration. SimilarSDK framework provided by Streamoid Technologies lets you seemlessly integrate visual search feature into your native android applications
 
 
 ### SETUP
