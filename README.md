@@ -21,11 +21,11 @@ SimilarSDK is an Android framework for displaying vendor products list based on 
 
 ```
 	dependencies {
-		implementation(name : 'streamoid-1.1',ext:'aar') // build tool version >=27
+		implementation(name : 'streamoid-1.0.0',ext:'aar') // build tool version >=27
 		  
 		   Or 
 
-		compile(name : 'streamoid-1.1',ext:'aar') // build tool version <27 
+		compile(name : 'streamoid-1.0.0',ext:'aar') // build tool version <27 
 	}
 ```
 3. Copy the below arguments to build.gradle(app  module)  to Load the aar file in libs folder 
@@ -255,6 +255,8 @@ config.json
 
 
  ## Orientation (horizontal,vertical)
+       
+       
        Type of Widget  : horizontal or vertical
           
 
@@ -262,16 +264,16 @@ config.json
 ## SwipeEnable (swipeEnable)
 
         To Enable Swipe (Scroll) or disable the scroll (move  by arrow )
- If u enable the Swipe it hide the arrow , u can scroll  up to end
-If u disable the swipe ,it show arrows to move the items based on tileCount 
+        If u enable the Swipe it hide the arrow , u can scroll  up to end
+        If u disable the swipe ,it show arrows to move the items based on tileCount 
   
 
 
 ## MaximumItemCount(maxItemCount)
 
        To Show Maximum number of item in List  
-  If u give maxItemCount =0 , it will show all the items 
-  If u give any sepecific count maxItemCount =10 , it will show only 10 items 
+       If u give maxItemCount =0 , it will show all the items 
+       If u give any sepecific count maxItemCount =10 , it will show only 10 items 
 
 ## Tile Configuration(tileConfig)
          
@@ -296,9 +298,11 @@ If u disable the swipe ,it show arrows to move the items based on tileCount
 
 
  ## Column Of Each Row (columns)
+	
 	fontName    - custom font name roboto_regular.ttf (font file should be defined in  assets/fonts with same name (This is optional)
 	fontSize   - Font Size of the Text  , it should be integer
 	textColor  - Text Color  it should be String (#909090)
+	
 	name       - key to display value in this field ( Brand Name, Product Name ) 
 	boldEnable - Enable bold Text (boolean)
 	strikeOutEnable - Enable Strike out Text (boolean) 
@@ -314,9 +318,11 @@ If u disable the swipe ,it show arrows to move the items based on tileCount
 	lineEnable - line should be shown after and before the text (boolean)
 	lineStyle - Style of the line (dashedLine ,line) 
 	lineColor - color of the line 
+	
 	fontName    - custom font name roboto_regular.ttf (font file should be defined in  assets/fonts with same name (This is optional)
 	fontSize   - Font Size of the Text  , it should be integer
 	textColor  - Text Color  it should be String (#909090)
+	
 	boldText - Text to be bold  (String)
 	strikeOutText - Text to be StrikeoutText (String) 
 	underlineText - Text to be StrikeoutTex (String)
