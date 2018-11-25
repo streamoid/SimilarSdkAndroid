@@ -51,8 +51,8 @@ Add this layout to Xml file
      <com.streamoid.product.ProductWidget.ProductListWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                **app:vendorId="270811"
-        	app:vendorName=”v_pantaloons”**
+                app:vendorId="270811"
+        	app:vendorName=”v_pantaloons”
                 android:id="@+id/product_view">
      </com.streamoid.product.ProductWidget.ProductListWidget>
 
