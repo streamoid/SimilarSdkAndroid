@@ -101,11 +101,12 @@
 
   "footer": {
     "lineHeight":1,
-    "lineStyle":"line",
+    "lineStyle":"dashedLine",
     "lineColor":"#33333A",
     "fontSize":9,
     "textColor":"#008080",
     "marginLeftRight":10,
-    "fontName":"roboto_bold.ttf"
+    "fontName":"roboto_bold.ttf",
+    "dashWidth":10
   }
 }
