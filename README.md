@@ -342,6 +342,9 @@ Add sdk Initialize code in Application Class
 	
 	Arrow Icons are shown if swipeEnable = true, use this flag while image Config 
 	
+	Image config or textRows Config is empty , then default configuration will apply
+	
+		
 
 ### Contact
 
