@@ -29,11 +29,11 @@ to use the JCenter Repository
 ```
 dependencies {
     ...
-    	implementation 'com.streamoid.product:streamoid:1.0.0' 
+    	implementation 'com.streamoid.product:streamoid:1.0.2' 
 		  
 	Or 
 
-	compile 'com.streamoid.product:streamoid:1.0.0'
+	compile 'com.streamoid.product:streamoid:1.0.2'
     ...
 }
 ```
