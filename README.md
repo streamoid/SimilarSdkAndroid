@@ -331,6 +331,17 @@ Add sdk Initialize code in Application Class
        marginTopBottom - margin for top and bottom of the view (Integer)
 
 
+### NOTE :
+	
+	Either Define protraitTileCount ,landscapeTileCount,swipeEnable or image config
+	
+	if image config is there , image is showing based on height and width so We can't controll the tiles count here
+	
+	if tiles count is there , whole tile width or height defined based on tile count , image is resized based on tile 
+	width or height 
+	
+	Arrow Icons are shown if swipeEnable = true, use this flag while image Config 
+	
 
 ### Contact
 
